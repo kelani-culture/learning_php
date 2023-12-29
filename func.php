@@ -23,8 +23,16 @@ function longdate($timestamp) {
 
 // annother way is to pass the variable as a second argument
 
-echo newdate($temp, time());
+#echo newdate($temp, time());
 
 function newdate($temp, $timestamp) {
     return $temp . date("l F js Y", $timestamp);
+}
+
+// global variable can be created using the keywod global
+
+function test() {
+    static $count = 0;
+    echo $count;
+    $count++;
 }
