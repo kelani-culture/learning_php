@@ -45,9 +45,17 @@ while ($j > -10) {
 #    echo (10 / $j) . "\n";
 }
 
-$a = 56;
-$b = 12;
+// learning foreach for iterating over an array
+$user = [
 
-$c = (int) ($a / $b);
+    "name" => "simi",
+    "email" => "kelanisimi@123.com",
+    "skills" => ['php', 'python', 'html', 'css'],
+];
 
-echo $c;
+foreach ($user as $key => $value) {
+    if (is_array($value)) {
+        $value = implode(', ', $value);
+    }
+    echo "$key" . ': '  . $value . "\n";
+}
