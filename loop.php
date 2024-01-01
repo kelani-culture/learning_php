@@ -42,5 +42,12 @@ while ($j > -10) {
 
     if ($j == 0) continue;
 
-    echo (10 / $j) . "\n";
+#    echo (10 / $j) . "\n";
 }
+
+$a = 56;
+$b = 12;
+
+$c = (int) ($a / $b);
+
+echo $c;

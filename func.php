@@ -24,15 +24,37 @@ function longdate($timestamp) {
 // annother way is to pass the variable as a second argument
 
 #echo newdate($temp, time());
+ 
+// function newdate($temp, $timestamp) {
+//     return $temp . date("l F js Y", $timestamp);
+// }
 
-function newdate($temp, $timestamp) {
-    return $temp . date("l F js Y", $timestamp);
-}
+// // global variable can be created using the keywod global
 
-// global variable can be created using the keywod global
+// function test() {
+//     static $count = 0;
+//     echo $count;
+//     $count++;
+// } 
 
-function test() {
-    static $count = 0;
-    echo $count;
-    $count++;
+// echo strrev(" .dlrow olleH");
+// echo str_repeat("Hip ", 2);
+// echo strtoupper("hooray!");
+
+// $lowered = ucfirst(strtolower("aNY # of Letters and PuncTuation you Waant"));
+// echo $lowered;
+
+$a1 = "WILLIAM";
+$a2 = "henry";
+$a3 = "gatEs";
+
+echo $a1 . " " . $a2 . " " . $a3 . "\n";
+fix_names();
+echo $a1 . " " . $a2 . " " . $a3;
+
+function fix_names() {
+    global $a1, $a2, $a3;
+    $a1 =  ucfirst(strtolower($a1));
+    $a2 = ucfirst(strtolower($a2));
+    $a3 = ucfirst(strtolower($a3));
 }
