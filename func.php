@@ -48,13 +48,19 @@ $a1 = "WILLIAM";
 $a2 = "henry";
 $a3 = "gatEs";
 
-echo $a1 . " " . $a2 . " " . $a3 . "\n";
+#echo $a1 . " " . $a2 . " " . $a3 . "\n";
 fix_names();
-echo $a1 . " " . $a2 . " " . $a3;
+#echo $a1 . " " . $a2 . " " . $a3;
 
 function fix_names() {
     global $a1, $a2, $a3;
     $a1 =  ucfirst(strtolower($a1));
     $a2 = ucfirst(strtolower($a2));
     $a3 = ucfirst(strtolower($a3));
+}
+
+if (function_exists("array_combine")) {
+    echo "Function exists";
+}  else {
+    echo "Function does not exists - better write your own";
 }
