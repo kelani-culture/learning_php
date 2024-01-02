@@ -3,6 +3,7 @@
 
 // $b ? print "TRUE" : print "FALSE";
 
+declare(strict_types=1);
 function longdates($timestamp)
 {
     return date("l F js Y", $timestamp);
@@ -52,15 +53,23 @@ $a3 = "gatEs";
 fix_names();
 #echo $a1 . " " . $a2 . " " . $a3;
 
-function fix_names() {
-    global $a1, $a2, $a3;
-    $a1 =  ucfirst(strtolower($a1));
-    $a2 = ucfirst(strtolower($a2));
-    $a3 = ucfirst(strtolower($a3));
-}
+// function fix_names() {
+//     global $a1, $a2, $a3;
+//     $a1 =  ucfirst(strtolower($a1));
+//     $a2 = ucfirst(strtolower($a2));
+//     $a3 = ucfirst(strtolower($a3));
+// }
 
-if (function_exists("array_combine")) {
-    echo "Function exists";
-}  else {
-    echo "Function does not exists - better write your own";
+// if (function_exists("array_combine")) {
+//     echo "Function exists";
+// }  else {
+//     echo "Function does not exists - better write your own";
+// }
+
+//  funciton having a return type
+
+
+echo fix_names();
+function fix_names() : string {
+    return 1;
 }
