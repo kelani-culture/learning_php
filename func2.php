@@ -17,4 +17,16 @@ function sum(int|float...$numbers): int|float {
 }
 
 $arr = [1, 2, 3, 4, 5, 6];
-echo sum(...$arr);
+#echo sum(...$arr);
+
+// naming argument
+function divide(int $x, int $y): int {
+    if ($x % $y === 0) {
+        return $x / $y;
+    } 
+    return $x;
+}
+$x = 6;
+$y = 3;
+
+echo divide(y: $y, x: $x);
