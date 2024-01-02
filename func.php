@@ -67,9 +67,12 @@ fix_names();
 // }
 
 //  funciton having a return type
+// the ? alows you to  return a null value if expected
+// the | alloows you to tie different data type you are expecting as a return value
 
+// and the mixed keyword return any dataa type
 
 echo fix_names();
-function fix_names() : string {
+function fix_names() : string|int {
     return 1;
 }
