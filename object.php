@@ -1,16 +1,15 @@
 <?php
 // understanding oop in php
 
-$object = new User;
-print_r($object); echo "\n";
+$object1 = new User();
+$object1->name = "Alice";
+$object2 = clone $object1;
+$object2->name = "Any";
 
-$object->name = "Joe";
-$object->password = "mypass";
-$object->save_user(); echo "\n";
-print_r($object); echo "\n";
-
+echo "object1 name = " . $object1->name ."\n";
+echo "object2 name = " . $object2->name . "\n";
 class User {
-    public $name, $password;
+    public $name;
 
     function save_user() {
         echo "Save User code goes here";
