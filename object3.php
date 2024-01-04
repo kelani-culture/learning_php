@@ -1,14 +1,16 @@
 <?php
 //  declaring properties
 
-$object1 = new User();
-$object1->name = "Alice";
 
-echo "$object1->name";
 
-class User {
-    public $name = "Paul Smith"; // valid
-    public $age = 42;// valid 
-    #public $time = time(); // invalid;
-    #public $score = $level * 2 // invalid
+class Translate {
+    const ENGLISH = 0;
+    const SPANISH = 1;
+    const FRENCH = 2;
+    const GERMAN = 3;
+
+    static function lookup() {
+        echo self::SPANISH;
+    }
 }
+Translate::lookup();
