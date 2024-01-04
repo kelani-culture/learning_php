@@ -13,4 +13,18 @@ class Translate {
         echo self::SPANISH;
     }
 }
-Translate::lookup();
+#Translate::lookup();
+
+$temp = new Test();
+
+echo "Test A: " . Test::$static_property . "\n";
+echo "Test B: " . $temp->get_sp() . "\n";
+#echo "Test C: " . $temp->static_property . "\n"; // bug static properties can't be acccessed from object instance
+
+class Test {
+    static $static_property = "I'm static";
+
+    function get_sp() {
+        return self::$static_property;
+    }
+}
