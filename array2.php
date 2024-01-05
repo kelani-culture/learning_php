@@ -37,6 +37,8 @@ $pap['photo'] = 'Photographic paper';
 
 // using array method for the array
 $p1 = array('copier', 'Inkjet', 'Laser', 'Photo');
-print_array($p1);
+#print_array($p1);
 
-echo "\n".$pap['laser'];
+// using the list function
+list($a, $b) = array('Alice', 'Bob');
+echo "a=$a b=$b";
