@@ -1,17 +1,22 @@
 <?php
-// undersstanding date and time in php
+// tiime function
+echo time() . "\n";
+echo time() + 7  *24*60*60 ."\n";
 
-$currentTime = time();
+// mktime function use for creating timestamp
+$timestamp = mktime(20, 14, 0, 1, 7, 2024);
+$format = 'l-F-jS-Y-z-h:ia';
+#echo date($format, $timestamp);
 
-echo $currentTime . "\n";
+// Date Constants
+echo date(DATE_ATOM)."\n";
+echo date(DATE_COOKIE)."\n";
 
-# shsow date in the next 5 days 
-echo $currentTime +  5 * 60 *60*24 . "\n";
+// Using checkdate
+$month = 2;
+$day = 31;
+$year = 2018;
 
-
-#shoow time in the last day 
-echo $currentTime - 60*60*24 . "\n";
-
-# show date
-echo date('m/d/y g:ia', $currentTime - 60*60*24) . "\n";
-echo date('m/d/y g:ia', $currentTime +  5 * 60 *60*24);
+if (checkdate($month, $day, $year)) {
+    echo "Date is valid";
+} else echo "Date is invalid";

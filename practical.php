@@ -27,3 +27,7 @@ $d = 'Rsamus Lerdorf';
 printf("[%12.8s]\n",          $d);
 printf("[%-12.12s]\n",          $d);
 printf("[%-'@12.8s]\n",          $d);
+
+// sprintf
+$out = sprintf("The result is $%.2f\n", 123.42 / 12);
+echo $out;
